@@ -125,3 +125,11 @@ async function fetchWeatherByCoordinates(lat, lon) {
     weather = finalResult.forecast.forecastday;
     display();
 }
+
+function showLoading() {
+    document.getElementById('loadingOverlay').style.display = 'flex';
+}
+
+function hideLoading() {
+    document.getElementById('loadingOverlay').style.display = 'none';
+}
