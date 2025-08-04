@@ -1,0 +1,174 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <!-- font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="./CSS/all.min.css">
+    <!-- css file -->
+    <link rel="stylesheet" href="./CSS/Style.css">
+    <!--media query-->
+    <link rel="stylesheet" href="./CSS/media.css">
+</head>
+
+<body class="font-family">
+
+    <nav class="navbar navbar-expand-lg bg-blue p-3">
+        <div class="container lg-85">
+            <a class="navbar-brand" href="#">
+                <div class="d-flex">
+                    <div>
+                        <img src="./Images/images1.png" class="width-image me-3" alt="cloud">
+                    </div>
+                    <div>
+                        <h1 class=" h1-nav mb-0">Weather</h1>
+                        <p class="p-nav">tagline goes here</p>
+                    </div>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link active" aria-current="page" href="#"><button
+                            class="button-nav-active">Home</button></a>
+                    <a class="nav-link " href="#"><button class="button-nav">News</button></a>
+                    <a class="nav-link" href="#"><button class="button-nav">Live Cameras</button></a>
+                    <a class="nav-link" href="#"><button class="button-nav">Photos</button></a>
+                    <a class="nav-link" href="#"><button class="button-nav">Contact</button></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="position-relative">
+        <section class="bg-img">
+            <div class="d-flex justify-content-center align-items-center pad-form">
+<div class="input-form-1 lg-75 d-flex position-relative">
+    <input oninput="getWeather()" id="inputWeatherUser" type="text" class="input-form"
+        placeholder="Find your location...">
+    <button id="inputWeatherBtn" class="btn-form" type="button">Find</button>
+    <button id="getLocationBtn" class="btn-form ms-2" type="button" style="right: -110px;">My Location</button>
+</div>
+
+            </div>
+        </section>
+
+        <section class="weather-section ">
+            <div class="container lg-75 position-section">
+                <div class="row g-0">
+                    <!-- <div class="col-12 col-md-4">
+                        <div class="h-100 rounded-3">
+                            <div class="d-flex justify-content-between align-items-center bg-card-1 color-font">
+                                <p class="m-0 p-2 ">Tuesday</p>
+                                <p class="m-0 p-2 ">26November</p>
+                            </div>
+                            <div class="bg-card-2">
+                                <div class="card-items">
+                                    <p class="color-font">Cairo</p>
+                                    <h1 class="degree">18.4<sup>o</sup>C</h1>
+                                    <img src="./Images/images3.png" class="width-image-card" alt="cloud">
+                                    <p class="color-blue">Partly cloudy</p>
+                                    <div class="d-flex ">
+                                        <div class="d-flex me-4">
+                                            <div>
+                                                <img src="./Images/images4.png" alt="">
+                                            </div>
+                                            <p class="ms-1 color-font">20%</p>
+                                        </div>
+                                        <div class="d-flex me-4">
+                                            <div>
+                                                <img src="./Images/images5.png" alt="">
+                                            </div>
+                                            <p class="ms-1 color-font">18km/h</p>
+                                        </div>
+                                        <div class="d-flex me-4">
+                                            <div>
+                                                <img src="./Images/images6.png" alt="">
+                                            </div>
+                                            <p class="ms-1 color-font">East</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-md-4 ">
+                        <div class="h-100 bg-card-4">
+                            <div class="text-center bg-card-3 color-font">
+                                <p class="m-0 p-2 ">Wednesday</p>
+                            </div>
+                            <div class="mt-5">
+                                <div class="card-items text-center">
+                                    <img src="./Images/images3.png" class="width-image-card-2 mb-3 pt-5" alt="">
+                                    <p class="degree-2 p-0 m-0">21.3<sup>o</sup>C</p>
+                                    <p class="p-0 mb-3 color-font">13<sup>o</sup></p>
+                                    <p class="color-blue">Partly cloudy</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class=" col-12 col-md-4 ">
+                        <div class="h-100 bg-card-5">
+                            <div class="text-center bg-card-6 color-font">
+                                <p class="m-0 p-2 ">Thursday</p>
+                            </div>
+                            <div class="mt-5">
+                                <div class="card-items text-center">
+                                    <img src="./Images/images3.png" class="width-image-card-2 mb-3 pt-5" alt="">
+                                    <p class="degree-2 p-0 m-0">22<sup>o</sup>C</p>
+                                    <p class="p-0 mb-3 color-font">14.4<sup>o</sup></p>
+                                    <p class="color-blue">Partly cloudy</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> -->
+                </div>
+            </div>
+        </section>
+        <section class="bg-half">
+        </section>
+    </main>
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="d-flex justify-content-around align-items-center pt-5">
+                    <div class="lg-55 d-flex position-relative">
+                        <input type="text" class="input-form" placeholder="Enter your email to subscribe...">
+                        <button class="btn-form-1 " type="button" id="">Subscribe</button>
+                    </div>
+                    <div class="me-5">
+                        <button type="button" class="btn btn-outline-primary"><i
+                                class="fa-brands fa-facebook-f "></i></button>
+                        <button type="button" class="btn btn-outline-primary"><i class="fa-brands fa-twitter"></i></button>
+                        <button type="button" class="btn btn-outline-primary"><i
+                                class="fa-brands fa-google-plus-g"></i></button>
+                        <button type="button" class="btn btn-outline-primary"><i
+                                class="fa-brands fa-pinterest"></i></button>
+                    </div>
+                    
+                </div>
+    <p class="footer-p mt-4 w-50">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+
+            </div>
+        </div>
+    </section>
+    <!-- bootstrap javascript -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- javascript file -->
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
